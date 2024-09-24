@@ -1,4 +1,8 @@
-name: Deploy App-Shell to GitHub Pages
+name: Deploy App-Shell to GCP
+
+permissions:
+  id-token: write
+  contents: read
 
 on:
   push:
@@ -16,7 +20,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 'latest'  # Ensure the node version matches your project
+          node-version: 'latest'
 
       - name: Install Dependencies
         run: | 
@@ -28,8 +32,12 @@ jobs:
           cd app-shell
           npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - uses: 'google-github-actions/auth@v2'
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./app-shell/dist  # Ensure this matches the build output folder
+          credentials_json: '${{ secrets.GOOGLE_AUTH }}'
+
+      - name: Deploy to GCP
+        run: |
+          cd app-shell
+          mv dist app-shell
+          gcloud storage cp --recursive app-shell gs://tractor-v2-module-federation
