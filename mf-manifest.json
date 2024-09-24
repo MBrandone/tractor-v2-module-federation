@@ -1,0 +1,117 @@
+{
+  "id": "app_shell",
+  "name": "app_shell",
+  "metaData": {
+    "name": "app_shell",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "1.0.0",
+      "buildName": "app-shell"
+    },
+    "remoteEntry": {
+      "name": "",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "app_shell",
+    "pluginVersion": "0.6.0",
+    "publicPath": "/"
+  },
+  "shared": [
+    {
+      "id": "app_shell:react-dom",
+      "name": "react-dom",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "^18.3.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/lib-react.8e39289f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "app_shell:react",
+      "name": "react",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "^18.3.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/lib-react.8e39289f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "federationContainerName": "checkout",
+      "moduleName": "MiniCart",
+      "alias": "checkout",
+      "entry": "http://localhost:3003/mf-manifest.json"
+    },
+    {
+      "federationContainerName": "explore",
+      "moduleName": "HomePage",
+      "alias": "explore",
+      "entry": "http://localhost:3001/mf-manifest.json"
+    },
+    {
+      "federationContainerName": "explore",
+      "moduleName": "CategoryPage",
+      "alias": "explore",
+      "entry": "http://localhost:3001/mf-manifest.json"
+    },
+    {
+      "federationContainerName": "decide",
+      "moduleName": "ProductPage",
+      "alias": "decide",
+      "entry": "http://localhost:3002/mf-manifest.json"
+    },
+    {
+      "federationContainerName": "checkout",
+      "moduleName": "CartPage",
+      "alias": "checkout",
+      "entry": "http://localhost:3003/mf-manifest.json"
+    },
+    {
+      "federationContainerName": "checkout",
+      "moduleName": "Checkout",
+      "alias": "checkout",
+      "entry": "http://localhost:3003/mf-manifest.json"
+    },
+    {
+      "federationContainerName": "checkout",
+      "moduleName": "Thanks",
+      "alias": "checkout",
+      "entry": "http://localhost:3003/mf-manifest.json"
+    },
+    {
+      "federationContainerName": "explore",
+      "moduleName": "StoresPage",
+      "alias": "explore",
+      "entry": "http://localhost:3001/mf-manifest.json"
+    }
+  ],
+  "exposes": []
+}

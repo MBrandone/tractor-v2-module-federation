@@ -1,0 +1,155 @@
+{
+  "id": "app_shell",
+  "name": "app_shell",
+  "metaData": {
+    "name": "app_shell",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "1.0.0",
+      "buildName": "app-shell"
+    },
+    "remoteEntry": {
+      "name": "",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "app_shell",
+    "pluginVersion": "0.6.0",
+    "publicPath": "/"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^18.3.1",
+      "shareScope": "default",
+      "name": "react-dom",
+      "version": "18.3.1",
+      "eager": false,
+      "id": "app_shell:react-dom",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/lib-react.8e39289f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^18.3.1",
+      "shareScope": "default",
+      "name": "react",
+      "version": "18.3.1",
+      "eager": false,
+      "id": "app_shell:react",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "static/js/async/lib-react.8e39289f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    }
+  ],
+  "remotes": [
+    {
+      "alias": "checkout",
+      "consumingFederationContainerName": "app_shell",
+      "federationContainerName": "checkout",
+      "moduleName": "MiniCart",
+      "usedIn": [
+        "src/bootstrap.jsx + 9 modules"
+      ],
+      "entry": "http://localhost:3003/mf-manifest.json"
+    },
+    {
+      "alias": "explore",
+      "consumingFederationContainerName": "app_shell",
+      "federationContainerName": "explore",
+      "moduleName": "HomePage",
+      "usedIn": [
+        "src/bootstrap.jsx + 9 modules"
+      ],
+      "entry": "http://localhost:3001/mf-manifest.json"
+    },
+    {
+      "alias": "explore",
+      "consumingFederationContainerName": "app_shell",
+      "federationContainerName": "explore",
+      "moduleName": "CategoryPage",
+      "usedIn": [
+        "src/bootstrap.jsx + 9 modules"
+      ],
+      "entry": "http://localhost:3001/mf-manifest.json"
+    },
+    {
+      "alias": "decide",
+      "consumingFederationContainerName": "app_shell",
+      "federationContainerName": "decide",
+      "moduleName": "ProductPage",
+      "usedIn": [
+        "src/bootstrap.jsx + 9 modules"
+      ],
+      "entry": "http://localhost:3002/mf-manifest.json"
+    },
+    {
+      "alias": "checkout",
+      "consumingFederationContainerName": "app_shell",
+      "federationContainerName": "checkout",
+      "moduleName": "CartPage",
+      "usedIn": [
+        "src/bootstrap.jsx + 9 modules"
+      ],
+      "entry": "http://localhost:3003/mf-manifest.json"
+    },
+    {
+      "alias": "checkout",
+      "consumingFederationContainerName": "app_shell",
+      "federationContainerName": "checkout",
+      "moduleName": "Checkout",
+      "usedIn": [
+        "src/bootstrap.jsx + 9 modules"
+      ],
+      "entry": "http://localhost:3003/mf-manifest.json"
+    },
+    {
+      "alias": "checkout",
+      "consumingFederationContainerName": "app_shell",
+      "federationContainerName": "checkout",
+      "moduleName": "Thanks",
+      "usedIn": [
+        "src/bootstrap.jsx + 9 modules"
+      ],
+      "entry": "http://localhost:3003/mf-manifest.json"
+    },
+    {
+      "alias": "explore",
+      "consumingFederationContainerName": "app_shell",
+      "federationContainerName": "explore",
+      "moduleName": "StoresPage",
+      "usedIn": [
+        "src/bootstrap.jsx + 9 modules"
+      ],
+      "entry": "http://localhost:3001/mf-manifest.json"
+    }
+  ],
+  "exposes": []
+}
