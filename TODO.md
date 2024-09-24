@@ -8,9 +8,9 @@
 - [X] La navigation se fait sans rafraîchissement complet de la page (routing de florian rappl)
 - [X] Envoyer un mail à Florian Rappl pour demander de l'aide (problème de mal formation du remoteEntry avec Vite expliqué plus bas)
 - [X] Mettre sur mon Github
-- [ ] Différence entre RsPack et RsBuild
-- [ ] Pourquoi faut bootstrap.jsx dans index.js ?
+- [X] Différence entre RsPack et RsBuild
 - [ ] Deployer sur Github ? gitlab ? GCP ?
+- [ ] Pourquoi faut bootstrap.jsx dans index.js ?
 
 ## VISION TODO
 - On est contraint de partager React en dépendance car interdit d'avoir deux fois le même react pour utiliser les hooks
@@ -26,6 +26,22 @@
 ## APPRENTISSAGE
 
 ### Différence entre RsBuild et RsPack
+
+RsPack est un web bundler écrit en Rust. Il offre une compatibilité forte avec l'eco-systeme de webpack afin de faciliter son remplacement.
+Le build est beaucoup plus rapide (410ms vs 5s sur web pack)
+https://rspack.dev/guide/start/introduction
+
+Aout 2024 => V1 production-ready
+Il propose un serveur de dev, des loaders pour intégrer plein de type de fichiers dans la web app, module federation, code splitting
+Un argument de vente est le compatible avec webpack et facile de passer de l'un à l'autre.
+
+Comparaison 
+bundlers => Build tool
+RsPack => RxBuild
+Rollup => Vite
+WebPack => CRA / Vue CLI
+
+Les build tools font essentiellement de la compilation
 
 ### Asset prefix rsbuild
 Toujours definir l'assetPrefix ou le host dans lequel run le producer. Le consumer utilise cette info pour ajouter la balise script nécessaire
