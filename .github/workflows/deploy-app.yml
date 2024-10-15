@@ -7,10 +7,10 @@ permissions:
 on:
   push:
     branches:
-      - main  # or whichever branch you want to trigger the deploy
+      - main
 
 jobs:
-  build-deploy:
+  build-deploy-app-shell:
     runs-on: ubuntu-latest
 
     steps:
@@ -38,6 +38,4 @@ jobs:
 
       - name: Deploy to GCP
         run: |
-          cd app-shell
-          mv dist app-shell
-          gcloud storage cp --recursive app-shell gs://tractor-v2-module-federation
+          gcloud storage cp -r app-shell/dist/** gs://tractor-v2-module-federation/app-shell

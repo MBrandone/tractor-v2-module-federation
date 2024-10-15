@@ -2,9 +2,14 @@ import {defineConfig} from '@rsbuild/core';
 import {pluginReact} from '@rsbuild/plugin-react';
 import {ModuleFederationPlugin} from "@module-federation/enhanced/rspack";
 
+const prod = process.env.NODE_ENV === 'production'
+
 export default defineConfig({
   dev: {
     assetPrefix: 'http://localhost:3003/',
+  },
+  output: {
+    assetPrefix: '/checkout/',
   },
   server: {
     port: 3003,
@@ -27,7 +32,7 @@ export default defineConfig({
             './MiniCart': './src/MiniCart/MiniCart.jsx'
           },
           remotes: {
-            'explore': 'explore@http://localhost:3001/mf-manifest.json'
+            'explore': prod ? 'explore@https://www.brm.ovh/explore/mf-manifest.json' : 'explore@http://localhost:3001/mf-manifest.json',
           },
           shared: ['react', 'react-dom'],
         }),

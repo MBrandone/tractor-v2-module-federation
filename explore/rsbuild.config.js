@@ -7,6 +7,9 @@ export default defineConfig({
   dev: {
     assetPrefix: 'http://localhost:3001/',
   },
+  output: {
+    assetPrefix: '/explore/',
+  },
   server: {
     port: 3001
   },
