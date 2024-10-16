@@ -1,6 +1,6 @@
 # TODO
 
-- [ ] Deployer sur GCP
+- [X] Deployer sur GCP
   - [X] Réussir à déployer à la main
     - [X] https://www.brm.ovh
     - [X] page 404
@@ -9,12 +9,12 @@
     - [X] Comment faire pour que Storage ne cache pas les fichiers - préciser cache-control=no-store dans les commande d'upload
     - [ ] Ecraser ancien fichier (ou bien supprimer)
     - [ ] c'est quoi les différence avec www et pas www pour les domaines
-  - [ ] Automatiser
+  - [X] Automatiser
     - [X] Sur githubactions
     - [X] Créer la pipeline pour app-shell
-    - [ ] Savoir trigger une pipeline en fonction des changements dans les dossiers du repo, puis un console.log
-    - [ ] Observer les changement des derniers commits
-    - [ ] variabiliser la pipeline et trigger les pipelines nécessaires en fonctions des changements
+    - [X] Savoir trigger une pipeline en fonction des changements dans les dossiers du repo, puis un console.log
+    - [X] Observer les changement des derniers commits
+    - [X] variabiliser la pipeline et trigger les pipelines nécessaires en fonctions des changements
 - [ ] Pourquoi faut bootstrap.jsx dans index.js ?
 
 ## Deploiement
