@@ -5,10 +5,10 @@ build-all:
 	cd explore && npm run build && cd ..
 
 deploy-all:
-	gcloud storage cp -r app-shell/dist/** gs://tractor-v2-module-federation/app-shell && \
-	gcloud storage cp -r checkout/dist/** gs://tractor-v2-module-federation/checkout && \
-	gcloud storage cp -r decide/dist/** gs://tractor-v2-module-federation/decide && \
-	gcloud storage cp -r explore/dist/** gs://tractor-v2-module-federation/explore
+	gcloud storage cp -r app-shell/dist/** gs://tractor-v2-module-federation/app-shell --cache-control='no-store' && \
+	gcloud storage cp -r checkout/dist/** gs://tractor-v2-module-federation/checkout --cache-control='no-store' && \
+	gcloud storage cp -r decide/dist/** gs://tractor-v2-module-federation/decide --cache-control='no-store' && \
+	gcloud storage cp -r explore/dist/** gs://tractor-v2-module-federation/explore --cache-control='no-store'
 
 delete-all:
 	gcloud storage rm -r gs://tractor-v2-module-federation/app-shell && \

@@ -6,11 +6,12 @@
     - [X] page 404
     - [X] Vérifier provisionnement certificat ssl : https://console.cloud.google.com/security/ccm/lbCertificates/details/tractor-v2-ssl?project=tractor-v2-module-federation
     - [X] index.html de app-shell doit aller chercher les bons js (pas le cas pour l'instant) => Config de build de prod
-    - [ ] Comment faire pour que Storage ne cache pas les fichiers
+    - [X] Comment faire pour que Storage ne cache pas les fichiers - préciser cache-control=no-store dans les commande d'upload
+    - [ ] Ecraser ancien fichier (ou bien supprimer)
     - [ ] c'est quoi les différence avec www et pas www pour les domaines
   - [ ] Automatiser
-    - [ ] Sur githubactions
-    - [ ] Créer la pipeline pour app-shell
+    - [X] Sur githubactions
+    - [X] Créer la pipeline pour app-shell
     - [ ] Savoir trigger une pipeline en fonction des changements dans les dossiers du repo, puis un console.log
     - [ ] Observer les changement des derniers commits
     - [ ] variabiliser la pipeline et trigger les pipelines nécessaires en fonctions des changements
