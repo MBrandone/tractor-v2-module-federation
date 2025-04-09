@@ -32,7 +32,7 @@ export default defineConfig({
             './MiniCart': './src/MiniCart/MiniCart.jsx'
           },
           remotes: {
-            'explore': prod ? 'explore@https://www.brm.ovh/explore/mf-manifest.json' : 'explore@http://localhost:3001/mf-manifest.json',
+            'explore': prod ? 'explore@https://brm.ovh/explore/mf-manifest.json' : 'explore@http://localhost:3001/mf-manifest.json',
           },
           shared: ['react', 'react-dom'],
         }),

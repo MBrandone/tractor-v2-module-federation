@@ -142,6 +142,24 @@ Open http://localhost:3000 in your browser to see the running application.
 Dev-Mode watches for changes in your server-side code.
 It does not watch for changes in your client-side JS and CSS code. This is built once on start.
 
+## How to deploy
+
+### To deploy in GCP
+Make sure you have terraform installed.
+
+In infrastructure/terraform/main.tf, put : 
+- your GCP project id
+- your domain name
+
+In rsbuild.config of each micro-frontend, verify the domain name is correct.
+
+Then
+`cd infrastructure/terraform && terraform init && terraform plan && terraform apply`
+
+Then run github-actions pipeline `deploy-app` to deploy built source code in GCP Cloud Bucket.
+Then redirect your domain to the load balancer IP (for brm.ovh, on ovh interface).
+Pay attention, deployment of ssl certification with GCP can take to 1 hour.
+
 ## Contribute and Build Your Own
 
 Visit the [Tractor Store Website](https://micro-frontends.org/tractor-store/#contribute) for more details.

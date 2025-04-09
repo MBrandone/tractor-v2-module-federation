@@ -1,1 +1,16 @@
 .idea
+
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Terraform crash log
+crash.log
+
+# Terraform provider plugins
+.terraform/
+
+# Sensitive variable files
+*.tfvars
+
+PREZ_TRIBU.md

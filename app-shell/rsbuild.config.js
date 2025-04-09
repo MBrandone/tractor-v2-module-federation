@@ -26,9 +26,9 @@ export default defineConfig({
         new ModuleFederationPlugin({
           name: 'app_shell',
           remotes: {
-            'explore': prod ? 'explore@https://www.brm.ovh/explore/mf-manifest.json' : 'explore@http://localhost:3001/mf-manifest.json',
-            'decide': prod ? 'decide@https://www.brm.ovh/decide/mf-manifest.json' : 'decide@http://localhost:3002/mf-manifest.json',
-            'checkout': prod ? 'checkout@https://www.brm.ovh/checkout/mf-manifest.json' : 'checkout@http://localhost:3003/mf-manifest.json',
+            'explore': prod ? 'explore@https://brm.ovh/explore/mf-manifest.json' : 'explore@http://localhost:3001/mf-manifest.json',
+            'decide': prod ? 'decide@https://brm.ovh/decide/mf-manifest.json' : 'decide@http://localhost:3002/mf-manifest.json',
+            'checkout': prod ? 'checkout@https://brm.ovh/checkout/mf-manifest.json' : 'checkout@http://localhost:3003/mf-manifest.json',
           },
           shared: ['react', 'react-dom', 'react-router-dom'],
         }),

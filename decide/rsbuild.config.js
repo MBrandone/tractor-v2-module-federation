@@ -28,8 +28,8 @@ export default defineConfig({
             './ProductPage': './src/ProductPage/ProductPage.jsx',
           },
           remotes: {
-            'checkout': prod ? 'checkout@https://www.brm.ovh/checkout/mf-manifest.json' : 'checkout@http://localhost:3003/mf-manifest.json',
-            'explore': prod ? 'explore@https://www.brm.ovh/explore/mf-manifest.json' : 'explore@http://localhost:3001/mf-manifest.json',
+            'checkout': prod ? 'checkout@https://brm.ovh/checkout/mf-manifest.json' : 'checkout@http://localhost:3003/mf-manifest.json',
+            'explore': prod ? 'explore@https://brm.ovh/explore/mf-manifest.json' : 'explore@http://localhost:3001/mf-manifest.json',
           },
           shared: ['react', 'react-dom'],
         }),
